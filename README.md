@@ -15,9 +15,9 @@ pnpm dev
 Push to `main` → GitHub Actions builds and publishes to GitHub Pages (`.github/workflows/deploy.yml`).
 Pages Source must be set to **GitHub Actions**.
 
-**`base` trap:** without a custom domain the site lives at `https://norin-web.github.io/DeviArt-v1/`, so
-`vite.config.ts` has `base: "/DeviArt-v1/"` (case-sensitive). When a domain is attached, switch to `base: "/"`
-and add `public/CNAME` in the same commit, or the site goes blank.
+**`base` trap:** the site is served from the custom domain https://dev-art.rest (`public/CNAME`), so
+`vite.config.ts` has `base: "/"`. If the domain is ever removed, switch back to `base: "/DeviArt-v1/"`
+(case-sensitive) and delete `public/CNAME` in the same commit, or the site goes blank.
 
 ## Content
 
